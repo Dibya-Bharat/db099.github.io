@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body id="home">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <span id="#logo"></span>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <H1>Hi, I'm <span>Dibya Bharat</span> from India</H1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------About-------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique est repellat suscipit. Voluptate nisi eaque perferendis. Esse vel porro tenetur nam cupiditate quasi numquam laudantium quibusdam aperiam, corrupti ratione.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>HTML, CSS, JS, Django, PHP</li>
+                            <li><span>Programming Languages</span><br>Java, C, C++, Python</li>
+                            <li><span>Operating System</span><br>Windows, LINUX</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2024</span><br>Bachelor of Computer Applications From GGSIPU</li>
+                            <li><span>2020</span><br>Class XII from (CBSE)</li>
+                            <li><span>2018</span><br>Class X from (CBSE)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social media</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus numquam doloribus tenetur unde dolor in magnam totam ex illum similique veritatis, aspernatur vel! Sunt, tenetur!</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Music app</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus numquam doloribus tenetur unde dolor in magnam totam ex illum similique veritatis, aspernatur vel! Sunt, tenetur!</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Shopping app</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus numquam doloribus tenetur unde dolor in magnam totam ex illum similique veritatis, aspernatur vel! Sunt, tenetur!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------Contact--------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="bi bi-telegram"></i>contact@example.com</p>
+                    <p><i class="bi bi-telephone"></i>0123456789</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" cols="30" rows="6" placeholder="Your Message"></textarea>
+                        <button class = "btn1 btn2" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Dibya 2024.</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
